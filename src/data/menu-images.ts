@@ -1,0 +1,21 @@
+// Match existing local menus as well as newly seeded menus without changing stored data.
+export const MENU_IMAGES: Readonly<Record<string, string>> = {
+  'pho bo tai': '/images/menu/pho-bo-tai.webp',
+  'bun bo hue': '/images/menu/bun-bo-hue.webp',
+  'com tam suon bi cha': '/images/menu/com-tam-suon-bi-cha.webp',
+  'bun cha ha noi': '/images/menu/bun-cha-ha-noi.webp',
+  'mi quang tom thit': '/images/menu/mi-quang-tom-thit.webp',
+  'com ga hoi an': '/images/menu/com-ga-hoi-an.webp',
+  'goi cuon tom thit': '/images/menu/goi-cuon-tom-thit.webp',
+  'cha gio': '/images/menu/cha-gio.webp',
+  'banh xeo': '/images/menu/banh-xeo.webp',
+  'nem nuong': '/images/menu/nem-nuong.webp',
+  'ca phe sua da': '/images/menu/ca-phe-sua-da.webp',
+  'tra da': '/images/menu/tra-da.webp',
+  'nuoc mia': '/images/menu/nuoc-mia.webp',
+  'sinh to bo': '/images/menu/sinh-to-bo.webp',
+  'tra chanh': '/images/menu/tra-chanh.webp',
+  'che ba mau': '/images/menu/che-ba-mau.webp',
+  'banh flan': '/images/menu/banh-flan.webp',
+  'sua chua nep cam': '/images/menu/sua-chua-nep-cam.webp',
+};

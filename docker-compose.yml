@@ -1,0 +1,18 @@
+# MongoDB cho môi trường phát triển, chạy độc lập (không replica set). Khởi động: docker compose up -d
+services:
+  mongo:
+    image: mongo:8.0
+    # Cổng riêng để không đụng MongoDB của dự án khác trên cùng máy.
+    ports:
+      - '27019:27017'
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--quiet', '--eval', 'db.adminCommand("ping").ok']
+      interval: 5s
+      timeout: 10s
+      retries: 20
+      start_period: 10s
+
+volumes:
+  mongo-data:

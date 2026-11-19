@@ -1,0 +1,42 @@
+- generic [ref=f3e1]:
+  - main [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - region "Quảng cáo và khuyến mãi tại quán" [ref=f3e4]:
+        - 'group "1 / 3: Chào mừng quý khách" [ref=f3e5]':
+          - img "Không gian quán ăn ấm cúng với bàn ăn và ánh đèn vàng" [ref=f3e6]
+          - generic [ref=f3e8]:
+            - paragraph [ref=f3e9]: Chào mừng quý khách
+            - heading "Bữa ngon, trọn vị yêu thương." [level=2] [ref=f3e11]
+            - paragraph [ref=f3e12]: Một bữa ăn ngon, một khoảng thời gian thật vui. Cảm ơn bạn đã ghé quán!
+        - group [aria-hidden] [ref=f3e13]:
+          - generic [ref=f3e16]:
+            - paragraph [ref=f3e17]: Khuyến mãi tại quán
+            - heading [level=2] [ref=f3e19]: Thêm ưu đãi, thêm niềm vui.
+            - paragraph [ref=f3e20]: Hỏi nhân viên về chương trình khuyến mãi và điều kiện áp dụng khi gọi món.
+        - group [aria-hidden] [ref=f3e21]:
+          - generic [ref=f3e24]:
+            - paragraph [ref=f3e25]: Hẹn nhau tại quán
+            - heading [level=2] [ref=f3e27]: Đông đủ hơn, vui nhiều hơn.
+            - paragraph [ref=f3e28]: Cùng gia đình, bạn bè quây quần bên bàn ăn và sẻ chia những câu chuyện.
+        - paragraph [ref=f3e29]: YangPOS
+        - generic [ref=f3e35]: 01/03
+      - button "Toàn màn hình" [ref=f3e36]
+    - region "Món quý khách đã chọn" [ref=f3e44]:
+      - generic [ref=f3e46]:
+        - paragraph [ref=f3e47]: YangPOS
+        - heading "Đơn của quý khách" [level=1] [ref=f3e48]
+      - list [ref=f3e53]:
+        - listitem [ref=f3e54]:
+          - generic [ref=f3e56]:
+            - paragraph [ref=f3e57]: Phở bò tái
+            - paragraph [ref=f3e58]: 1 × 55.000 ₫
+          - paragraph [ref=f3e59]: 55.000 ₫
+      - generic [ref=f3e63]:
+        - generic [ref=f3e64]:
+          - generic [ref=f3e65]: Số món
+          - generic [ref=f3e66]: "1"
+        - generic [ref=f3e67]:
+          - generic [ref=f3e68]: Tổng cộng
+          - generic [ref=f3e69]: 55.000 ₫
+  - button "Open Next.js Dev Tools" [ref=f3e75] [cursor=pointer]
+  - alert [ref=f3e79]

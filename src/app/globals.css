@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: var(--font-be-vietnam-pro);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+@theme {
+  --color-canvas: #f6f2ec;
+  --color-surface: #ffffff;
+  --color-surface-muted: #faf7f2;
+  --color-line: #e9e1d6;
+  --color-line-strong: #d6cabb;
+  --color-ink: #1f1a15;
+  --color-ink-soft: #6b6158;
+  --color-ink-faint: #a39689;
+  --color-brand: #c4470e;
+  --color-brand-dark: #a03a0b;
+  --color-brand-soft: #fdeee3;
+  --color-success: #2f7a4b;
+  --color-success-soft: #e3f2e8;
+  --color-warning: #9a5b00;
+  --color-warning-soft: #fdf1dc;
+  --color-danger: #b42318;
+  --color-danger-soft: #fdecea;
+
+  /* Màu phân loại cho biểu đồ, dùng theo thứ tự cố định; đã kiểm tra độ tách biệt cho người mù màu. */
+  --color-series-1: #2a78d6;
+  --color-series-2: #eb6834;
+  --color-series-3: #1baf7a;
+
+  --shadow-card: 0 1px 2px rgb(31 26 21 / 0.05), 0 1px 3px rgb(31 26 21 / 0.04);
+  --shadow-raised:
+    0 8px 20px -6px rgb(31 26 21 / 0.16), 0 2px 4px -2px rgb(31 26 21 / 0.06);
+  --shadow-overlay:
+    0 24px 56px -12px rgb(31 26 21 / 0.3), 0 8px 16px -8px rgb(31 26 21 / 0.12);
+
+  --animate-pop: pop 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animate-fade-in: fade-in 180ms ease-out;
+  --animate-dialog-in: dialog-in 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-sheet-in: sheet-in 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-toast-in: toast-in 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-caret-blink: caret-blink 1s step-end infinite;
+
+  @keyframes caret-blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pop {
+    40% {
+      transform: scale(1.22);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes dialog-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.97);
+    }
+  }
+
+  @keyframes sheet-in {
+    from {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(-12px) scale(0.97);
+    }
+  }
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Khóa cuộn trang nền khi có hộp thoại đang mở. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog::backdrop {
+  background-color: rgb(31 26 21 / 0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  dialog[open]::backdrop {
+    animation: backdrop-in 200ms ease-out;
+  }
+}
+
+/* Khi in hóa đơn qua trình duyệt chỉ in vùng hóa đơn, ẩn toàn bộ giao diện. */
+.receipt-print-root {
+  display: none;
+}
+
+@media print {
+  /* Bỏ khóa cuộn của hộp thoại đang mở để không cắt mất phần sau của hóa đơn dài. */
+  html {
+    overflow: visible !important;
+  }
+
+  body > :not(.receipt-print-root) {
+    display: none !important;
+  }
+
+  .receipt-print-root {
+    display: block;
+  }
+
+  .receipt-print-copy {
+    margin: 0 auto;
+    padding: 2mm 0;
+    break-after: page;
+  }
+
+  .receipt-print-copy:last-child {
+    break-after: auto;
+  }
+}

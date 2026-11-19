@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="88" viewBox="0 0 360 88" fill="none" role="img" aria-labelledby="title"><title id="title">YangPOS</title><g transform="translate(12 12)">
+  <rect width="64" height="64" rx="18" fill="#c4470e"/>
+  <g stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 16v8a6 6 0 0 0 12 0v-8M23 16v10" stroke-width="4"/>
+    <path d="m23 30 9 9 15-21M32 39v10" stroke-width="5.5"/>
+  </g>
+</g><text x="94" y="59" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="-1.8" fill="#1f1a15">Yang<tspan fill="#c4470e">POS</tspan></text></svg>
